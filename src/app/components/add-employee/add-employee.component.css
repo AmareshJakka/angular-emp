@@ -1,0 +1,19 @@
+.add-container{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.image-div{
+ 
+    margin-right:30px;
+}
+.form-div{
+    margin: auto;
+    margin-bottom: 10px;
+}
+
+.form-group{
+    display:flex;
+    flex-direction: row;
+    justify-content:space-between;
+}

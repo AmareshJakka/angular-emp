@@ -1,0 +1,23 @@
+<div *ngIf="empDetail">
+    <h6 class="mb-2">Employee Details</h6>
+    <div class="container">
+        <div class="emp-image">
+            <div>
+                <img class="mb-2"width="180px" height="180px" src="{{empDetail.avatar}}" alt="">
+            </div>
+            <div>
+            <button class=" mr-2 btn btn-primary" shape="round" size="small" >Update</button>
+            <button shape="round" size="small" class="btn btn-danger">Delete</button>
+            </div>
+            
+        </div>
+        <div>
+            <p><b>Employee ID  : </b>{{empDetail.id}}</p>
+            <p><b>First Name : </b>{{empDetail.first_name}}</p>
+            <p><b>Last Name  : </b>{{empDetail.last_name}}</p>
+            <p><b>Email Address: </b>{{empDetail.email}}</p>
+        </div>
+    </div>
+   
+</div>
+

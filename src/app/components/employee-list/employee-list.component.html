@@ -1,11 +1,11 @@
-<p>employee-list works!</p>
-<p>employee-list works!</p>
-<p>employee-list works!</p>
-<p>employee-list works!</p>
-<p>employee-list works!</p>
-<p>employee-list works!</p>
-<p>employee-list works!</p>
-<p>employee-list works!</p>
-<p>employee-list works!</p>
-<p>employee-list works!</p>
-<p>employee-list works!</p>
+
+<div *ngIf="employees">
+    <h6 class="emp-length">Total of {{employees.length}} employees </h6>
+    <div class="list-container">
+        <div class="emp-container" (click)="open(item)" *ngFor="let item of employees">
+            <img width="180px" height="180px" src="{{item.avatar}}"/>
+            <span>{{item.first_name+item.last_name}}</span>
+        </div>
+    </div>
+    
+</div>

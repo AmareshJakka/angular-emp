@@ -1,0 +1,28 @@
+.list-container{
+        width:100%;
+        height:70%;
+        display: grid;
+        grid-template-columns: 2fr 2fr 2fr 2fr;
+        grid-gap:20px;
+        overflow: hidden;
+    
+
+}
+
+.emp-container{
+    display: flex;
+    flex-direction: column;
+    border: 1px solid gray;
+    border-radius: 5px;
+    padding: 5px;
+    cursor: pointer;
+    -moz-osx-font-smoothing:grayscale;
+    transform: translateZ(0);
+    transition: transform 0.25 ease-out;
+    align-items: center;
+
+}
+
+.emp-length{
+    float:right;
+}

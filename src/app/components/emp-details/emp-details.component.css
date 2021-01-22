@@ -1,0 +1,14 @@
+.container{
+    display:flex;
+    border: 1px #ccc solid;
+    padding: 10px;
+    justify-content:flex-end;
+
+}
+.container>div{
+    flex:1;
+}
+.emp-image{
+    display: flex;
+    flex-direction:column;
+}
