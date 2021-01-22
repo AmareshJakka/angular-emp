@@ -1,10 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { EmployeeService } from "../../services/employee.service";
-import { empModal } from "../../modals/emp.modal";
-import { Router } from '@angular/router';
+import { Router, NavigationExtras } from '@angular/router';
 import {FormBuilder, FormGroup, Validators} from "@angular/forms";
-import { IEmployee } from 'src/app/modals/employee';
-import { combineAll } from 'rxjs/operators';
 @Component({
   selector: 'app-add-employee',
   templateUrl: './add-employee.component.html',
@@ -12,6 +9,8 @@ import { combineAll } from 'rxjs/operators';
 })
 export class AddEmployeeComponent implements OnInit {
   submitted = false;
+  fileToUpload: File = null;
+  employee;
 
   addForm: FormGroup;
   constructor(private formBuilder: FormBuilder,private employeeService: EmployeeService,
@@ -30,15 +29,20 @@ export class AddEmployeeComponent implements OnInit {
   }
   onSubmit() {
     console.log(this.addForm.value);
-    localStorage.setItem("employees.data",this.addForm.value);
+    //localStorage.setItem("employees.data",this.addForm.value);
+    this.employee = this.addForm.value;
+    console.log(this.employee);
     this.employeeService.createEmployee(this.addForm.value)
       .subscribe( data => {
-        this.router.navigate(['/employee-list']);
+        const navigationExtras: NavigationExtras = {state:this.employee};
+        this.router.navigate(['/employee-list'],navigationExtras);
       });
 
 
   }
-
+  handleFileInput(files: FileList) {
+    this.fileToUpload = files.item(0);
+  }
  // save() {
   //   console.log(this.employee);   
   //   this.employeeService
