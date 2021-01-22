@@ -10,6 +10,7 @@ import { EmployeeListComponent } from './components/employee-list/employee-list.
 import { AddEmployeeComponent } from './components/add-employee/add-employee.component';
 import { HeaderComponent } from './components/header/header.component';
 import { EmpDetailsComponent } from './components/emp-details/emp-details.component';
+import { NgxPaginationModule } from 'ngx-pagination';
 
 @NgModule({
   declarations: [
@@ -25,6 +26,7 @@ import { EmpDetailsComponent } from './components/emp-details/emp-details.compon
     HttpClientModule,
     FormsModule,
     ReactiveFormsModule,
+    NgxPaginationModule
   ],
   providers: [],
   bootstrap: [AppComponent]

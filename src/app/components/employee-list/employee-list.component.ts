@@ -14,6 +14,7 @@ import { combineAll } from 'rxjs/operators';
 export class EmployeeListComponent implements OnInit {
   employees;
   employee;
+  pageSize =8;
  
   constructor(private router:Router,private employeeService: EmployeeService) {
     const navigation = this.router.getCurrentNavigation();
@@ -31,6 +32,7 @@ export class EmployeeListComponent implements OnInit {
   reloadData(){
 
     this.employeeService.getEmployeesList().subscribe(list=>{
+      console.log(list)
       console.log(this.employee)
       if(this.employee){
         this.employees =list;
