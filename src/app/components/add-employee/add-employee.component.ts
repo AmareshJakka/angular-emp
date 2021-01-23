@@ -43,24 +43,6 @@ export class AddEmployeeComponent implements OnInit {
   handleFileInput(files: FileList) {
     this.fileToUpload = files.item(0);
   }
- // save() {
-  //   console.log(this.employee);   
-  //   this.employeeService
-  //   .createEmployee(this.employee).subscribe(data => {
-  //     console.log(data)
-  //     console.log(this.employee)
-  //     this.gotoList();
-  //   }, 
-  //   error => console.log(error));
-  // }
-
-  // onSubmit() {
-  //   this.submitted = true;
-  //   this.save();    
-  // }
-
-  // gotoList() {
-  //   this.router.navigate(['/employee-list']);
-  // }
+ 
 
 }

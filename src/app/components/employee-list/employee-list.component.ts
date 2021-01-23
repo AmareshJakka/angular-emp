@@ -4,7 +4,6 @@ import { EmployeeService } from "../../services/employee.service";
 import { empModal } from "../../modals/emp.modal";
 import{IEmployee} from '../../modals/employee';
 import { Router, NavigationExtras } from '@angular/router';
-import { combineAll } from 'rxjs/operators';
 
 @Component({
   selector: 'app-employee-list',
@@ -32,8 +31,6 @@ export class EmployeeListComponent implements OnInit {
   reloadData(){
 
     this.employeeService.getEmployeesList().subscribe(list=>{
-      console.log(list)
-      console.log(this.employee)
       if(this.employee){
         this.employees =list;
         this.employee.push(this.employee);
