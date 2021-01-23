@@ -33,14 +33,13 @@ export class EmployeeListComponent implements OnInit {
     this.employeeService.getEmployeesList().subscribe(list=>{
       if(this.employee){
         this.employees =list;
-        this.employee.push(this.employee);
+        this.employees.push(this.employee);
       }
       else{
         this.employees =list
       }
      
     })
-    console.log(this.employees)
   }
 
   open(item){
